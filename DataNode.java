@@ -1,93 +1,89 @@
 import java.util.ArrayList;  
 import java.util.List;  
   
-/** 
- *  
- * @author wilsonact
- * 
- */  
-public class DataNode {  
-    private String nodeName; // 样本点名  
-    private double[] dimensioin; // 样本点的维度  
-    private double kDistance; // k-距离  
-    private List<DataNode> kNeighbor = new ArrayList<DataNode>();// k-领域  
-    private double distance; // 到给定点的欧几里得距离  
-    private double reachDensity;// 可达密度  
-    private double reachDis;// 可达距离  
-  
-    private double lof;// 局部离群因子  
-  
-    public DataNode() {  
-  
-    }  
-  
-    public DataNode(String nodeName, double[] dimensioin) {  
-        this.nodeName = nodeName;  
-        this.dimensioin = dimensioin;  
-    }  
-  
-    public String getNodeName() {  
-        return nodeName;  
-    }  
-  
-    public void setNodeName(String nodeName) {  
-        this.nodeName = nodeName;  
-    }  
-  
-    public double[] getDimensioin() {  
-        return dimensioin;  
-    }  
-  
-    public void setDimensioin(double[] dimensioin) {  
-        this.dimensioin = dimensioin;  
-    }  
-  
-    public double getkDistance() {  
-        return kDistance;  
-    }  
-  
-    public void setkDistance(double kDistance) {  
-        this.kDistance = kDistance;  
-    }  
-  
-    public List<DataNode> getkNeighbor() {  
-        return kNeighbor;  
-    }  
-  
-    public void setkNeighbor(List<DataNode> kNeighbor) {  
-        this.kNeighbor = kNeighbor;  
-    }  
-  
-    public double getDistance() {  
-        return distance;  
-    }  
-  
-    public void setDistance(double distance) {  
-        this.distance = distance;  
-    }  
-  
-    public double getReachDensity() {  
-        return reachDensity;  
-    }  
-  
-    public void setReachDensity(double reachDensity) {  
-        this.reachDensity = reachDensity;  
-    }  
-  
-    public double getReachDis() {  
-        return reachDis;  
-    }  
-  
-    public void setReachDis(double reachDis) {  
-        this.reachDis = reachDis;  
-    }  
-  
-    public double getLof() {  
-        return lof;  
-    }  
-  
-    public void setLof(double lof) {  
-        this.lof = lof;  
-    }  
-  
-}  
+/**
+     * @author wilsonact
+     */
+    public static class DataNode {
+        private String nodeName; // Sample name
+        private double[] dimensioin; // The dimension of the sample point
+        private double kDistance; // k-distance
+        private List<DataNode> kNeighbor = new ArrayList<>();// k-field
+        private double distance; // Euclidean distance to a given point
+        private double reachDensity;// Reachable density
+        private double reachDis;// Reach the distance
+
+        private double lof;// Local outlier
+
+        public DataNode() { }
+
+        DataNode(String nodeName, double[] dimensioin) {
+            this.nodeName = nodeName;
+            this.dimensioin = dimensioin;
+        }
+
+        String getNodeName() {
+            return nodeName;
+        }
+
+        public void setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+        }
+
+        double[] getDimensioin() {
+            return dimensioin;
+        }
+
+        public void setDimensioin(double[] dimensioin) {
+            this.dimensioin = dimensioin;
+        }
+
+        double getkDistance() {
+            return kDistance;
+        }
+
+        void setkDistance(double kDistance) {
+            this.kDistance = kDistance;
+        }
+
+        List<DataNode> getkNeighbor() {
+            return kNeighbor;
+        }
+
+        public void setkNeighbor(List<DataNode> kNeighbor) {
+            this.kNeighbor = kNeighbor;
+        }
+
+        double getDistance() {
+            return distance;
+        }
+
+        void setDistance(double distance) {
+            this.distance = distance;
+        }
+
+        double getReachDensity() {
+            return reachDensity;
+        }
+
+        void setReachDensity(double reachDensity) {
+            this.reachDensity = reachDensity;
+        }
+
+        double getReachDis() {
+            return reachDis;
+        }
+
+        void setReachDis(double reachDis) {
+            this.reachDis = reachDis;
+        }
+
+        double getLof() {
+            return lof;
+        }
+
+        void setLof(double lof) {
+            this.lof = lof;
+        }
+    }
+
